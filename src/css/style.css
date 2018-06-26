@@ -1,0 +1,144 @@
+/* bounce in animation  */
+@keyframes bounceInDown {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+      opacity: 1;
+      transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+      transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+      transform: translate3d(0, 5px, 0);
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  /* bonce out animation */
+  @keyframes bounceOutUp {
+    20% {
+      transform: translate3d(0, -10px, 0);
+    }
+
+    40%,
+    45% {
+      opacity: 1;
+      transform: translate3d(0, 20px, 0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translate3d(0, -2000px, 0);
+    }
+  }
+
+body {
+    background: #101327 url('../../assets/background/game_background_3.png') no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.modal-registration {
+    height: 100%;
+    background: rgb(81, 33, 172);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: none;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.modal-score {
+  height: 100%;
+  background: rgb(81, 33, 172);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: none;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.show {
+    display: block;
+    animation-name: bounceInDown;
+  }
+
+  .hide-modal {
+    animation-name: bounceOutUp ;
+  }
+
+  .modal {
+    color: black;
+  }
+
+  .mixed-list {
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    user-select: none;
+  }
+.mixed-list li {
+  display: inline;
+  padding: 0 5px; 
+  border: 1px solid;
+  font-size: 1.6rem;
+  cursor: pointer;
+  background: #17a2b8ad;
+  margin: 0 5px;
+}
+
+.konvajs-content {
+  margin: 0 auto;
+}
+
+.header-logo {
+  margin-top: 10%;
+}
+
+.registration {
+  margin: 3% 0;
+}
+
+.game-info {
+  margin-top: 20px;
+}
+
+.game-canvas {
+  margin-top: 10%;
+}
+
+.spels-group {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.task-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.task {
+  padding: 10px;
+  background: khaki;
+}
